@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <script> 
+        /*1. Faça um algoritmo para ler 20 números e armazenar em um array. Após a leitura total dos 20 números, o algoritmo deve escrever esse array. */ 
+        var contador = 0; 
+         var array = []; 
+         var numero = 0; 
+
+         while (contador < 20){
+             numero = parseInt(prompt("Insira os numeros")); 
+             array.push (numero); 
+
+			 contador++; 
+
+		 	 }	 
+         
+		
+		 document.write (array)
+
+
+        /*2. Faça um algoritmo para ler 12 números e armazenar em dois arrays: um com os números acima de 50. Outro com números abaixo de 50.*/ 
+        
+        var contador = 0;
+        var seq1 = []; 
+        var seq2 = []; 
+        var num = 0; 
+
+        while ( contador < 12){
+
+            num = prompt ("Digite um número:")
+
+            if ( num > 50){
+                seq1.push (num); 
+
+            } else {
+                seq2.push(num); 
+
+            }
+            contador ++; 
+        }
+
+        document.write (seq1 + "-" + seq2)
+
+        /*3. Drofo e Topper estão em uma aventura mágica. Faça um programa que contenha um inventário para cada um dos dois aventureiros - esse inventário será um array.
+Drofo terá um anel da invisibilidade, dois pares de botas mágicas, uma poção do sono e duas poções da inocência em seu inventário e nessa ordem. 
+Torper terá uma capa da invisibilidade, uma pedra do despertar,  uma varinha das varinhas, uma poção da inocência e duas poções da mentira, poção anti-inteligência
+ e nessa ordem. 
+
+No meio de sua jornada, Torper consumiu uma das poções da mentira, perdeu sua pedra e ganhou um par de botar mágicas do Drofo, achou um escudo mágico e uma espada mágica. 
+Descreva cada uma das ações acima. utilizando código (utilize comentários para ficar mais claro). 
+
+No meio da sua jornada, Drofo, ganhou mais uma bota mágica, usou sua poção do sono e consumiu a poção anti-inteligência do Torper,
+encontrou um ovo de dragão e uma coxinha.
+Descreva cada uma das ações acima. utilizando código.
+
+Exiba o resultado final de cada um dos inventários utilizando "document.write"*/ 
+
+
+//*Drofo terá um anel da invisibilidade, dois pares de botas mágicas, uma poção do sono e duas poções da inocência em seu inventário e nessa ordem. */ 
+var arraydrofo = ["anel da invisibilidade", " par de botas mágicas"  , " par de botas mágicas " , " poção de sono", " poção da inocência", " poção da inocência"];
+
+
+/*Torper terá uma capa da invisibilidade, uma pedra do despertar,  uma varinha das varinhas, uma poção da inocência e duas poções da mentira, poção anti-inteligência
+ e nessa ordem. */
+var arraytorper = ["capa da invisibilidade"," pedra do despertar ", " varinha das varinhas" , " poção da inocência" , " poção da mentira" , " poção da mentira" , 
+   " poção da anti-inteligência"]; 
+
+
+/*Torper consumiu uma das poções da mentira */ 
+arraytorper.splice(4,4);
+
+/*torper perdeu sua pedra*/ 
+arraytorper.splice(1,1);
+
+/*ganhou um par de botar mágicas*/ 
+arraytorper.push(" botas mágicas");
+
+/*achou um escudo mágico */ 
+arraytorper.push (" escudo mágico e espada mágica." ); 
+
+/*e espada mágica*/ 
+arraytorper.push ("e espada mágica"); 
+
+
+/*Drofo, ganhou mais uma bota mágica*/ 
+arraydrofo.push (" ,bota mágica");
+
+/*ganhou um par de botar mágicas do Drofo*/ 
+arraydrofo.splice (1,1);
+
+/*usou sua poção do sono*/ 
+arraydrofo.splice(2,2);
+
+/*consumiu a poção anti-inteligência do Torper*/ 
+arraytorper.pop();
+
+/*encontrou um ovo de dragão e uma coxinha.*/
+arraydrofo.push (" ovo de dragão, e uma coxinha."); 
+
+
+document.write ("os itens finais de Drofo foi: <br>" + arraydrofo + " <br> e os itens finais de Torper foi: <br> " + arraytorper) 
+
+
+/*4. Machado de Assis! Para cada um dos grupos de obras acima, ordene e crie um array com as obras. 
+
+Agora, ainda utilizando código, crie mais um array e insira os três primeiros livros de cada grupo de obras. */ 
+
+var arraylivros1 =  [" Romances " , "Memorial de Aires (1908)" ,"Ressurreição (1872)", "Casa Velha (1885)" , "Memórias Póstumas de Brás Cubas (1881)" , "Helena (1876) " , "Quincas Borba (1891)" , "Esaú e Jacó (1904)" , "A mão e a luva (1874)",  "Dom Casmurro (1899)" , "Iaiá Garcia (1878)"]; 
+var arraylivros2 = ["Coletânea de Poesias" , "Americanas (1875)" , "Ocidentais (1880)" , "Falenas (1870)" , "Crisálidas (1864)" ,"Poesias Completas (1901)"]; 
+var arraylivros3 = ["Coletânea de contos" , "Várias Histórias (1896)" , "Histórias sem Data (1884)" , "Papéis Avulsos (1882)" , "Contos Fluminenses (1870)" , "Histórias da Meia-Noite (1873)" , "Relíquias de Casa Velha (1906)" , "Páginas Recolhidas (1899)"]; 
+
+var arrayfinal = []; 
+
+var contagem = 0; 
+
+    while ( contagem < 3){ 
+    arrayfinal.push (arraylivros1[contagem])
+
+
+    while ( contagem < 3){ 
+    arrayfinal.push (arraylivros2[contagem])
+
+
+    while ( contagem < 3){ 
+    arrayfinal.push (arraylivros3[contagem])
+
+    contagem++; 
+}
+    }
+}
+
+
+document.write ("Os primeiros livros de cada obra são <br>" + arrayfinal) 
+
+
+        </script>
+     </head>
+<bory>
+</bory> 
+</html> 
